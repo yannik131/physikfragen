@@ -15,6 +15,8 @@ while True:
 
 destination = filedialog.asksaveasfilename(title='Speicherort auswählen',
                                            filetypes=[('PDF-Dateien', '*.pdf')])
+if not destination:
+    quit()
 if not destination.endswith('.pdf'):
     destination += '.pdf'
 
